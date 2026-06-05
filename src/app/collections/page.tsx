@@ -14,9 +14,10 @@ export default async function CollectionsPage({
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-10 px-6 py-12 lg:px-10">
       <section className="rounded-[28px] border border-slate-200 bg-white/90 p-8 text-slate-900 shadow-xl shadow-slate-200/80">
-        <p className="text-sm uppercase tracking-[0.35em] text-teal-700">Server Components</p>
+        <p className="text-sm uppercase tracking-[0.35em] text-teal-700">Server Components · SSR / data-first rendering</p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">Collections</h1>
-        <p className="mt-3 max-w-3xl text-slate-600">This route fetches directly on the server, demonstrates search params, and keeps the client bundle lean.</p>
+        <p className="mt-3 max-w-3xl text-slate-600">This route renders on the server, fetches content directly in the component, and keeps the client bundle lean. It is a strong example of server-first data access for collection browsing and filtering.</p>
+        <p className="mt-3 rounded-2xl bg-slate-50 p-3 text-sm text-slate-700">Architecture use: React Server Components, server-side filtering, route params, and a lightweight UI boundary for content-heavy pages.</p>
       </section>
 
       <form className="flex gap-3 rounded-[24px] border border-slate-200 bg-white/90 p-4 shadow-xl shadow-slate-200/80">

@@ -58,17 +58,20 @@ export default function Home() {
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <article className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
           <p className="text-xs uppercase tracking-[0.35em] text-teal-700">Architecture overview</p>
-          <h3 className="mt-3 text-xl font-semibold text-slate-900">Route structure at a glance</h3>
-          <ul className="mt-4 space-y-2 text-sm text-slate-700">
-            <li>• / — landing page with SSG + ISR</li>
-            <li>• /collections and /collections/[slug] — server-rendered browsing + ISR detail pages</li>
-            <li>• /articles and /articles/[slug] — static editorial content</li>
-            <li>• /dashboard and /profile — SSR, session-aware views</li>
-            <li>• /admin — SSR authorization-protected area</li>
-            <li>• /search — client-side search with debounce and error states</li>
-            <li>• /cache-demo — cache strategy examples for static, dynamic, and ISR flows</li>
-            <li>• /api/* — route handlers acting as the BFF layer</li>
+          <h3 className="mt-3 text-xl font-semibold text-slate-900">Route map & rendering decisions</h3>
+          <p className="mt-3 text-sm text-slate-600">This playground intentionally splits content, user-specific views, and interactive experiences across different rendering models.</p>
+          <ul className="mt-4 space-y-3 text-sm text-slate-700">
+            <li><strong>/</strong> — SSG + ISR landing page for fast marketing content and cacheable entry points.</li>
+            <li><strong>/collections</strong> — server-rendered collection browsing with direct server data access and lightweight filtering.</li>
+            <li><strong>/collections/[slug]</strong> — ISR detail pages that refresh automatically after the revalidation window.</li>
+            <li><strong>/articles</strong> and <strong>/articles/[slug]</strong> — static content pages optimized for SEO and evergreen editorial copy.</li>
+            <li><strong>/dashboard</strong> and <strong>/profile</strong> — SSR views that reflect the current session, role, and permission context.</li>
+            <li><strong>/admin</strong> — SSR authorization-protected route that demonstrates middleware + role-aware access.</li>
+            <li><strong>/search</strong> — CSR route with debounced user input, loading, and error states for interactive search UX.</li>
+            <li><strong>/cache-demo</strong> — explicit examples of force-cache, no-store, and ISR strategies in practice.</li>
+            <li><strong>/api/*</strong> — BFF-style route handlers that centralize data and revalidation logic for the frontend.</li>
           </ul>
+          <p className="mt-4 rounded-2xl bg-slate-50 p-3 text-xs text-slate-600">Additional focus areas: middleware, route protection, cache tuning, server/client boundary design, and content-model separation.</p>
         </article>
         <article className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
           <p className="text-xs uppercase tracking-[0.35em] text-teal-700">Featured articles</p>

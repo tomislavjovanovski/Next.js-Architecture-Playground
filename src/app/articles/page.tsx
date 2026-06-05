@@ -7,9 +7,10 @@ export default function ArticlesPage() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-8 px-6 py-12 lg:px-10">
       <section className="rounded-[28px] border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/80">
-        <p className="text-sm uppercase tracking-[0.35em] text-teal-700">Static Rendering</p>
+        <p className="text-sm uppercase tracking-[0.35em] text-teal-700">SSG · Static Rendering</p>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">Designer Articles</h1>
-        <p className="mt-3 max-w-3xl text-slate-600">Static pages are ideal for evergreen editorial content and SEO-friendly article listings.</p>
+        <p className="mt-3 max-w-3xl text-slate-600">This page uses static generation for editorial content that should be fast, cacheable, and SEO-friendly. It is ideal for evergreen articles and stable metadata.</p>
+        <p className="mt-3 rounded-2xl bg-slate-50 p-3 text-sm text-slate-700">Architecture use: SSG, content-driven pages, static HTML delivery, and an efficient market-ready pattern for high-readability content.</p>
       </section>
       <section className="grid gap-6 md:grid-cols-2">
         {articles.map((article) => (
