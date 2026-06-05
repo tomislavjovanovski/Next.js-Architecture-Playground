@@ -36,6 +36,7 @@ export default function RootLayout({
               <a href="/articles">Articles</a>
               <a href="/dashboard">Dashboard</a>
               <a href="/search">Search</a>
+              <a href="/cache-demo">Cache Demo</a>
             </div>
           </nav>
         </header>

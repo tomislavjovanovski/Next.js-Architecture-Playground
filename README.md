@@ -2,6 +2,13 @@
 
 This project is a production-style architecture showcase for an interior design experience platform. It is intentionally designed to demonstrate how a senior frontend engineer would reason about rendering strategies, caching, auth, authorization, route design, and modern Next.js architecture in one app.
 
+## Recent improvements
+
+The project now includes the following production-ready additions:
+- a dedicated cache strategy demo route at `/cache-demo`
+- improved client-side search with debounced input, loading feedback, and error handling
+- loading and error boundaries for a more polished UX
+
 ## What this project demonstrates
 
 This app intentionally showcases the following concepts:
@@ -53,7 +60,8 @@ Key areas:
 - `/articles` and `/articles/[slug]` — static article content
 - `/dashboard` and `/profile` — SSR authenticated views
 - `/admin` — SSR authorization-protected area
-- `/search` — client-side interactive search
+- `/search` — client-side interactive search with debouncing and error states
+- `/cache-demo` — explicit cache strategy examples for static, dynamic, and ISR patterns
 - `/api/*` — route handlers acting as a BFF layer
 
 ---
@@ -153,6 +161,7 @@ This is useful because:
 - it keeps data orchestration off the client
 - it hides CMS or backend complexity from the UI
 - it centralizes caching, validation, and shaping of response data
+- it allows the app to present production-style UX patterns such as loading and error handling through route-driven architecture
 
 ### Why the BFF pattern matters
 The BFF route `/api/homepage` can internally gather content from multiple sources and return a single response for the UI.
@@ -177,7 +186,7 @@ Used for session-sensitive views or highly personalized content.
 ### ISR cache
 Used for pages like collection details that should refresh periodically without full rebuilds.
 
-These examples demonstrate how cache strategy is a product decision, not just a framework detail.
+These examples demonstrate how cache strategy is a product decision, not just a framework detail. The dedicated `/cache-demo` page makes the tradeoffs visible and easy to discuss in interviews or reviews.
 
 ---
 
