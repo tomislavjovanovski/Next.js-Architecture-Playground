@@ -57,6 +57,20 @@ export default function Home() {
 
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <article className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
+          <p className="text-xs uppercase tracking-[0.35em] text-teal-700">Architecture overview</p>
+          <h3 className="mt-3 text-xl font-semibold text-slate-900">Route structure at a glance</h3>
+          <ul className="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• / — landing page with SSG + ISR</li>
+            <li>• /collections and /collections/[slug] — server-rendered browsing + ISR detail pages</li>
+            <li>• /articles and /articles/[slug] — static editorial content</li>
+            <li>• /dashboard and /profile — SSR, session-aware views</li>
+            <li>• /admin — SSR authorization-protected area</li>
+            <li>• /search — client-side search with debounce and error states</li>
+            <li>• /cache-demo — cache strategy examples for static, dynamic, and ISR flows</li>
+            <li>• /api/* — route handlers acting as the BFF layer</li>
+          </ul>
+        </article>
+        <article className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
           <p className="text-xs uppercase tracking-[0.35em] text-teal-700">Featured articles</p>
           {articles.slice(0, 2).map((article) => <p key={article.slug} className="mt-4 text-slate-700">• {article.title}</p>)}
         </article>
