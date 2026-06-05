@@ -27,11 +27,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <header className="border-b border-zinc-200 bg-white/90 backdrop-blur">
+      <body className="min-h-full flex flex-col text-slate-900">
+        <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/85 backdrop-blur-xl">
           <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-10">
-            <a href="/" className="text-lg font-semibold text-zinc-950">Next.js Architecture Playground</a>
-            <div className="flex flex-wrap gap-3 text-sm text-zinc-600">
+            <a href="/" className="text-lg font-semibold tracking-[0.18em] text-teal-700 uppercase">Next.js Architecture Playground</a>
+            <div className="flex flex-wrap gap-3 text-sm text-slate-700">
               <a href="/collections">Collections</a>
               <a href="/articles">Articles</a>
               <a href="/dashboard">Dashboard</a>

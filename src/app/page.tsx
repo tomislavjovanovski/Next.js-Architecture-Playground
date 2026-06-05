@@ -6,46 +6,63 @@ export const revalidate = 300;
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-10 px-6 py-12 lg:px-10">
-      <section className="grid gap-6 rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="grid gap-6 rounded-[28px] border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/80 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="text-sm uppercase tracking-[0.35em] text-emerald-600">SSG + ISR · BFF architecture</p>
-          <h1 className="mt-3 text-4xl font-semibold text-zinc-950 md:text-5xl">Interior Design Experience Platform</h1>
-          <p className="mt-4 max-w-2xl text-zinc-600">{homepage.summary}</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-teal-700">SSG + ISR · BFF architecture</p>
+          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-6xl">Next.js Architecture Playground</h1>
+          <p className="mt-4 max-w-2xl text-slate-700">{homepage.summary}</p>
+          <p className="mt-3 max-w-2xl text-sm text-slate-500">A refined showcase of rendering strategy, cache design, and modern frontend architecture decisions.</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/collections" className="rounded-full bg-zinc-950 px-5 py-3 text-sm font-semibold text-white">Browse collections</Link>
-            <Link href="/search" className="rounded-full border border-zinc-300 px-5 py-3 text-sm font-semibold text-zinc-800">Try interactive search</Link>
-            <Link href="/api/auth/demo?role=admin" className="rounded-full border border-emerald-300 px-5 py-3 text-sm font-semibold text-emerald-700">Login as admin</Link>
+            <Link href="/collections" className="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5">Browse collections</Link>
+            <Link href="/search" className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5">Try interactive search</Link>
+            <Link href="/api/auth/demo?role=admin" className="rounded-full border border-teal-200 bg-teal-50 px-5 py-3 text-sm font-semibold text-teal-800 shadow-sm transition hover:-translate-y-0.5">View admin demo</Link>
           </div>
         </div>
-        <aside className="rounded-3xl bg-zinc-950 p-6 text-white shadow-2xl shadow-black/10">
-          <p className="text-sm uppercase tracking-[0.35em] text-emerald-300">Architecture highlights</p>
-          <ul className="mt-5 space-y-4 text-sm text-zinc-200">
-            <li>SSR for user-specific dashboard views</li>
+        <aside className="rounded-[28px] border border-slate-200 bg-white/90 p-6 text-slate-900 shadow-xl shadow-slate-200/80">
+          <p className="text-sm uppercase tracking-[0.35em] text-teal-700">Architecture highlights</p>
+          <ul className="mt-5 space-y-4 text-sm text-slate-700">
+            <li>SSR for fresh, user-specific dashboard views</li>
             <li>ISR for collection detail refreshes</li>
-            <li>CSR for debounced search interactions</li>
-            <li>Middleware for protected routes</li>
+            <li>CSR for debounced, interactive search</li>
+            <li>Middleware for protected and authorized routes</li>
           </ul>
         </aside>
       </section>
 
       <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {collections.slice(0, 3).map((item) => (
-          <article key={item.slug} className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <p className="text-xs uppercase tracking-[0.35em] text-emerald-600">{item.trend}</p>
-            <h2 className="mt-3 text-2xl font-semibold text-zinc-950">{item.title}</h2>
-            <p className="mt-3 text-zinc-600">{item.tagline}</p>
+          <article key={item.slug} className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-700">{item.trend}</p>
+            <h2 className="mt-3 text-2xl font-semibold text-slate-900">{item.title}</h2>
+            <p className="mt-3 text-slate-600">{item.tagline}</p>
           </article>
         ))}
       </section>
 
+      <section className="rounded-[28px] border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/80">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p className="text-sm uppercase tracking-[0.35em] text-teal-700">Architecture map</p>
+            <h2 className="mt-3 text-2xl font-semibold text-slate-900">Rendering strategy overview</h2>
+            <p className="mt-3 max-w-2xl text-slate-600">Static, dynamic, and interactive layers are intentionally separated to highlight when SSR, ISR, SSG, and CSR are the right architectural choice.</p>
+          </div>
+          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">SSG → ISR → SSR → CSR</div>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-4">
+          {['Static marketing pages', 'Recurring content refresh', 'Session-aware views', 'Interactive search'].map((label) => (
+            <div key={label} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-slate-700">{label}</div>
+          ))}
+        </div>
+      </section>
+
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <article className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-          <p className="text-xs uppercase tracking-[0.35em] text-emerald-600">Featured articles</p>
-          {articles.slice(0, 2).map((article) => <p key={article.slug} className="mt-4 text-zinc-700">• {article.title}</p>)}
+        <article className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
+          <p className="text-xs uppercase tracking-[0.35em] text-teal-700">Featured articles</p>
+          {articles.slice(0, 2).map((article) => <p key={article.slug} className="mt-4 text-slate-700">• {article.title}</p>)}
         </article>
-        <article className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-          <p className="text-xs uppercase tracking-[0.35em] text-emerald-600">Trending spaces</p>
-          {trends.map((trend) => <p key={trend} className="mt-4 text-zinc-700">• {trend}</p>)}
+        <article className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
+          <p className="text-xs uppercase tracking-[0.35em] text-teal-700">Trending spaces</p>
+          {trends.map((trend) => <p key={trend} className="mt-4 text-slate-700">• {trend}</p>)}
         </article>
       </section>
     </main>

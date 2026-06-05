@@ -13,10 +13,10 @@ export default async function CacheDemoPage() {
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-8 px-6 py-12 lg:px-10">
-      <section className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-        <p className="text-sm uppercase tracking-[0.35em] text-emerald-600">Cache strategies</p>
-        <h1 className="mt-3 text-4xl font-semibold text-zinc-950">Cache strategy examples</h1>
-        <p className="mt-3 text-zinc-600">This page demonstrates three practical cache patterns: force-cache for static content, no-store for fresh user data, and ISR for periodic refreshes.</p>
+      <section className="rounded-[28px] border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/80">
+        <p className="text-sm uppercase tracking-[0.35em] text-teal-700">Cache strategies</p>
+        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">Cache strategy examples</h1>
+        <p className="mt-3 text-slate-600">This page demonstrates three practical cache patterns: force-cache for static content, no-store for fresh user data, and ISR for periodic refreshes.</p>
       </section>
 
       <section className="grid gap-6 lg:grid-cols-3">
@@ -25,10 +25,10 @@ export default async function CacheDemoPage() {
           { title: 'Dynamic data', description: 'Use no-store for session-sensitive content that must always be fresh.', example: dynamicExample },
           { title: 'ISR cache', description: 'Use next.revalidate to refresh content periodically without rebuilding everything.', example: isrExample },
         ].map((item) => (
-          <article key={item.title} className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <p className="text-xs uppercase tracking-[0.35em] text-emerald-600">{item.title}</p>
-            <p className="mt-3 text-zinc-600">{item.description}</p>
-            <pre className="mt-4 rounded-2xl bg-zinc-950 p-4 text-xs text-emerald-100">{JSON.stringify(item.example, null, 2)}</pre>
+          <article key={item.title} className="flex min-h-full flex-col rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80 transition hover:-translate-y-1 hover:border-teal-300">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-700">{item.title}</p>
+            <p className="mt-3 text-slate-600">{item.description}</p>
+            <pre className="mt-4 overflow-x-auto rounded-2xl bg-slate-50 p-4 text-xs text-slate-700 whitespace-pre-wrap break-words">{JSON.stringify(item.example, null, 2)}</pre>
           </article>
         ))}
       </section>

@@ -1,13 +1,8 @@
 # Next.js 15 Architecture Playground
 
-This project is a production-style architecture showcase for an interior design experience platform. It is intentionally designed to demonstrate how a senior frontend engineer would reason about rendering strategies, caching, auth, authorization, route design, and modern Next.js architecture in one app.
+This project is a polished architecture showcase for an interior design experience platform. It is intentionally designed to demonstrate how a senior Next.js frontend engineer evaluates rendering strategy, caching, auth, authorization, route design, and platform architecture in a production-minded codebase.
 
-## Recent improvements
-
-The project now includes the following production-ready additions:
-- a dedicated cache strategy demo route at `/cache-demo`
-- improved client-side search with debounced input, loading feedback, and error handling
-- loading and error boundaries for a more polished UX
+The current implementation also includes the latest visual polish: a darker, more editorial palette, stronger typography hierarchy, refined glass-card surfaces, and consistent presentation across the landing, collections, articles, dashboard, profile, search, and cache-demo views.
 
 ## What this project demonstrates
 
@@ -35,7 +30,7 @@ This app intentionally showcases the following concepts:
 
 ## Project purpose
 
-The project is not a commerce app. It is an architecture playground focused on how rendering decisions affect performance, UX, security, and maintainability.
+The project is not a commerce app. It is an architecture-first playground focused on the trade-offs that shape real production systems: performance, UX, security, maintainability, and rendering discipline.
 
 The experience is centered around:
 - Design inspirations
@@ -44,7 +39,7 @@ The experience is centered around:
 - Designer articles
 - Trends
 
-This makes it easy to explain why some pages are static, some are dynamic, and some are interactive.
+This framing makes it easy to explain why some pages are static, some are dynamic, and some are highly interactive — a common discussion point in senior frontend interviews.
 
 ---
 
@@ -246,7 +241,7 @@ A major part of this project is showing when to choose each strategy.
 
 ## TypeScript and modern architecture
 
-The project is written in TypeScript to make the codebase more maintainable and explicit.
+The project is written in TypeScript to make the codebase explicit, scalable, and easier to reason about as the architecture grows.
 
 Benefits shown here:
 - safer data contracts
@@ -259,7 +254,7 @@ This fits the modern frontend architecture mindset of strong typing, separation 
 
 ## How to review this project
 
-A reviewer should be able to immediately identify:
+A reviewer should be able to immediately recognize:
 - App Router usage
 - Server vs client rendering boundaries
 - protected routes and middleware logic

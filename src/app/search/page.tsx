@@ -49,32 +49,32 @@ export default function SearchPage() {
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-8 px-6 py-12 lg:px-10">
-      <section className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-        <p className="text-sm uppercase tracking-[0.35em] text-emerald-600">CSR</p>
-        <h1 className="mt-3 text-4xl font-semibold text-zinc-950">Interactive search</h1>
-        <p className="mt-3 text-zinc-600">This client-side route now uses debounced input, loading feedback, and graceful errors to demonstrate modern client architecture more clearly.</p>
+      <section className="rounded-[28px] border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/80">
+        <p className="text-sm uppercase tracking-[0.35em] text-teal-700">CSR</p>
+        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">Interactive search</h1>
+        <p className="mt-3 text-slate-600">This client-side route now uses debounced input, loading feedback, and graceful errors to demonstrate modern client architecture more clearly.</p>
       </section>
 
-      <label className="rounded-2xl border border-zinc-200 bg-white p-4 text-sm shadow-sm">
-        <span className="mb-2 block text-zinc-500">Search</span>
+      <label className="rounded-[24px] border border-slate-200 bg-white/90 p-4 text-sm shadow-xl shadow-slate-200/80">
+        <span className="mb-2 block text-slate-600">Search</span>
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          className="w-full bg-transparent outline-none text-zinc-950"
+          className="w-full bg-transparent outline-none text-slate-800 placeholder:text-slate-400"
           placeholder="Search for moods, materials, or collections"
         />
       </label>
 
-      {loading ? <p className="text-sm text-zinc-500">Searching…</p> : null}
+      {loading ? <p className="text-sm text-slate-600">Searching…</p> : null}
       {error ? <p className="rounded-2xl bg-rose-50 p-4 text-sm text-rose-700">{error}</p> : null}
 
       {!loading && !error && results.length === 0 && query.trim() ? (
-        <p className="rounded-2xl bg-zinc-100 p-4 text-sm text-zinc-600">No matches yet. Try another phrase.</p>
+        <p className="rounded-2xl bg-slate-50 p-4 text-sm text-slate-700">No matches yet. Try another phrase.</p>
       ) : null}
 
       <ul className="grid gap-4 md:grid-cols-2">
         {results.map((item) => (
-          <li key={item} className="rounded-3xl border border-zinc-200 bg-white p-4 shadow-sm">{item}</li>
+          <li key={item} className="rounded-[24px] border border-slate-200 bg-white/90 p-4 shadow-xl shadow-slate-200/80 text-slate-700">{item}</li>
         ))}
       </ul>
     </main>
