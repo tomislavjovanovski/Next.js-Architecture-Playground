@@ -15,7 +15,7 @@ This personal showcase demonstrates how a Next.js app can be structured to explo
 - TypeScript-first architecture that stays readable as the project grows
 - polished loading, error, and not-found states for a more complete product experience
 - explicit cache-strategy reasoning for real-world rendering decisions
-- test coverage for middleware and route-handler behavior
+- test coverage for middleware, route handlers, server-rendered pages, and cache/revalidation flows
 
 ## Project screenshots
 
@@ -52,7 +52,7 @@ The project is not a commerce app. It is an architecture-first playground focuse
 It now also includes:
 - a more polished loading, error, and not-found experience
 - a cache-demo section that explains why each strategy is chosen in practice
-- tests that validate middleware and API-route behavior
+- tests that validate middleware, API-route behavior, server-page branching, and content rendering
 
 The experience is centered around a flexible content-driven concept with curated visuals, editorial storytelling, and interactive sections that help demonstrate different rendering and UX patterns.
 
@@ -269,6 +269,22 @@ This fits the modern frontend architecture mindset of strong typing, separation 
 
 ---
 
+## Test coverage
+
+The current Vitest suite is designed to validate architectural behavior, not just isolated helpers.
+
+It currently covers:
+- middleware redirects, authenticated pass-through, admin authorization, and protected-route matchers
+- route handlers for homepage data, collections, search behavior, demo auth cookies, logout behavior, and revalidation triggers
+- cache-demo rendering with assertions for `force-cache`, `no-store`, and ISR-style `revalidate` fetch usage
+- server-rendered page behavior for dashboard, profile, admin, article detail, and collection detail routes
+- `notFound()` and `redirect()` branches for invalid slugs and unauthorized admin access
+- content rendering checks for the homepage, articles index, collections filtering, and the initial search page render
+
+This gives the project coverage across rendering strategy decisions, route protection, cache invalidation, and server-side branching that are central to the architecture story.
+
+---
+
 ## How to review this project
 
 A reviewer should be able to immediately recognize:
@@ -289,4 +305,3 @@ npm run dev
 ```
 
 Then open http://localhost:3000 to explore the project.
-
