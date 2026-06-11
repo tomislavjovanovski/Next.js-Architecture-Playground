@@ -4,6 +4,30 @@ This project is a polished architecture showcase for an interior design experien
 
 The current implementation also includes the latest visual polish: a darker, more editorial palette, stronger typography hierarchy, refined glass-card surfaces, and consistent presentation across the landing, collections, articles, dashboard, profile, search, and cache-demo views.
 
+## Why this stands out to recruiters
+
+This repo is built to show senior-level decision making, not just a collection of pages:
+
+- clear rendering boundaries between SSG, SSR, ISR, and CSR
+- production-style cache and revalidation thinking
+- middleware and protected-route design for auth + authorization
+- BFF route handlers that centralize data orchestration
+- TypeScript-first structure that scales cleanly for real product teams
+
+## Project screenshots
+
+![Landing page](public/screenshots/home.png)
+
+![Collections view](public/screenshots/collections.png)
+
+![Interactive search experience](public/screenshots/search.png)
+
+## What to emphasize in an interview
+
+- I intentionally chose different rendering strategies for different product needs instead of using one pattern everywhere.
+- The architecture demonstrates how cache policy, middleware, and route design affect both performance and security.
+- The project reads like a production codebase: reusable content models, route clarity, and engineering trade-off documentation.
+
 ## What this project demonstrates
 
 This app intentionally showcases the following concepts:

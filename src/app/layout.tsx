@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Architecture Playground",
-  description: "A Next.js architecture showcase for SSG, SSR, ISR, CSR, middleware, and route handlers.",
+  title: "Senior Next.js Architecture Playground",
+  description: "A recruiter-friendly Next.js 15 showcase of SSR, SSG, ISR, CSR, middleware, auth, caching, and BFF patterns.",
 };
 
 export default function RootLayout({

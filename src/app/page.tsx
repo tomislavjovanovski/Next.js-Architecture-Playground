@@ -8,10 +8,10 @@ export default function Home() {
     <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-10 px-6 py-12 lg:px-10">
       <section className="grid gap-6 rounded-[28px] border border-slate-200 bg-white/90 p-8 shadow-xl shadow-slate-200/80 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="text-sm uppercase tracking-[0.35em] text-teal-700">SSG + ISR · BFF architecture</p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-6xl">Next.js Architecture Playground</h1>
+          <p className="text-sm uppercase tracking-[0.35em] text-teal-700">Senior Next.js · architecture-first demo</p>
+          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 md:text-6xl">Senior Next.js Architecture Playground</h1>
           <p className="mt-4 max-w-2xl text-slate-700">{homepage.summary}</p>
-          <p className="mt-3 max-w-2xl text-sm text-slate-500">A refined showcase of rendering strategy, cache design, and modern frontend architecture decisions.</p>
+          <p className="mt-3 max-w-2xl text-sm text-slate-500">Designed to show senior-level judgment around rendering boundaries, cache strategy, middleware, auth flows, and production-minded route design.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/collections" className="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5">Browse collections</Link>
             <Link href="/search" className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5">Try interactive search</Link>
@@ -27,6 +27,19 @@ export default function Home() {
             <li>Middleware for protected and authorized routes</li>
           </ul>
         </aside>
+      </section>
+
+      <section className="grid gap-6 md:grid-cols-3">
+        {[
+          'App Router, route handlers, and a clear BFF layer',
+          'SSR + ISR + CSR boundaries chosen intentionally for real product trade-offs',
+          'Middleware, auth, and cache/revalidation patterns that reflect production architecture thinking',
+        ].map((item) => (
+          <article key={item} className="rounded-[24px] border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-200/80">
+            <p className="text-xs uppercase tracking-[0.35em] text-teal-700">Recruiter proof point</p>
+            <p className="mt-3 text-slate-700">{item}</p>
+          </article>
+        ))}
       </section>
 
       <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
