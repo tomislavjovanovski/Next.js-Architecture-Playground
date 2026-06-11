@@ -13,6 +13,9 @@ This personal showcase demonstrates how a Next.js app can be structured to explo
 - middleware, auth, and protected-route behavior
 - route handlers and a BFF-style data layer
 - TypeScript-first architecture that stays readable as the project grows
+- polished loading, error, and not-found states for a more complete product experience
+- explicit cache-strategy reasoning for real-world rendering decisions
+- test coverage for middleware and route-handler behavior
 
 ## Project screenshots
 
@@ -45,6 +48,11 @@ This app intentionally showcases the following concepts:
 ## Project purpose
 
 The project is not a commerce app. It is an architecture-first playground focused on the trade-offs that shape real production systems: performance, UX, security, maintainability, and rendering discipline.
+
+It now also includes:
+- a more polished loading, error, and not-found experience
+- a cache-demo section that explains why each strategy is chosen in practice
+- tests that validate middleware and API-route behavior
 
 The experience is centered around a flexible content-driven concept with curated visuals, editorial storytelling, and interactive sections that help demonstrate different rendering and UX patterns.
 
