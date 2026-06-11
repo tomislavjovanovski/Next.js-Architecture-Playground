@@ -2,7 +2,7 @@
 
 This project is a polished architecture showcase for an interior design experience platform. It is intentionally designed to demonstrate how a senior Next.js frontend engineer evaluates rendering strategy, caching, auth, authorization, route design, and platform architecture in a production-minded codebase.
 
-The current implementation also includes the latest visual polish: a darker, more editorial palette, stronger typography hierarchy, refined glass-card surfaces, and consistent presentation across the landing, collections, articles, dashboard, profile, search, and cache-demo views.
+The current implementation also includes a refined visual direction: a bright editorial palette with blue and green accents, stronger typography hierarchy, soft glass-card surfaces, and consistent presentation across the landing, collections, articles, dashboard, profile, search, and cache-demo views.
 
 ## What this project shows
 
@@ -16,7 +16,7 @@ This personal showcase demonstrates how a Next.js app can be structured to explo
 
 ## Project screenshots
 
-![Portfolio overview](public/screenshots/portfolio-collage.png)
+![Portfolio overview](public/screenshots/home.png)
 
 ## What this project demonstrates
 
@@ -46,12 +46,7 @@ This app intentionally showcases the following concepts:
 
 The project is not a commerce app. It is an architecture-first playground focused on the trade-offs that shape real production systems: performance, UX, security, maintainability, and rendering discipline.
 
-The experience is centered around:
-- Design inspirations
-- Living spaces
-- Furniture collections
-- Designer articles
-- Trends
+The experience is centered around a flexible content-driven concept with curated visuals, editorial storytelling, and interactive sections that help demonstrate different rendering and UX patterns.
 
 This framing makes it easy to explain why some pages are static, some are dynamic, and some are highly interactive — a common discussion point in senior frontend interviews.
 
