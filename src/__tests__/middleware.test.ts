@@ -13,6 +13,15 @@ describe('middleware', () => {
     expect(response.headers.get('location')).toBe('http://localhost/?auth=login-required');
   });
 
+  it('redirects unauthorized users away from admin routes', () => {
+    const request = new NextRequest('http://localhost/admin');
+
+    const response = middleware(request);
+
+    expect(response.status).toBe(307);
+    expect(response.headers.get('location')).toBe('http://localhost/?auth=forbidden');
+  });
+
   it('allows admin users to access protected admin routes', () => {
     const request = new NextRequest('http://localhost/admin', {
       headers: {
