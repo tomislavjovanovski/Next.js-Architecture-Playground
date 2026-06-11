@@ -111,7 +111,7 @@ describe('API routes', () => {
     const cookie = response.headers.get('set-cookie');
     expect(cookie).toContain('demo-role=admin');
     expect(cookie).toContain('HttpOnly');
-    expect(cookie).toContain('SameSite=Lax');
+    expect(cookie?.toLowerCase()).toContain('samesite=lax');
   });
 
   it('defaults the demo role cookie to viewer when no role is provided', async () => {
