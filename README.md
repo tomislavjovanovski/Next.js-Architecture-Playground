@@ -4,29 +4,19 @@ This project is a polished architecture showcase for an interior design experien
 
 The current implementation also includes the latest visual polish: a darker, more editorial palette, stronger typography hierarchy, refined glass-card surfaces, and consistent presentation across the landing, collections, articles, dashboard, profile, search, and cache-demo views.
 
-## Why this stands out to recruiters
+## What this project shows
 
-This repo is built to show senior-level decision making, not just a collection of pages:
+This personal showcase demonstrates how a Next.js app can be structured to explore:
 
-- clear rendering boundaries between SSG, SSR, ISR, and CSR
-- production-style cache and revalidation thinking
-- middleware and protected-route design for auth + authorization
-- BFF route handlers that centralize data orchestration
-- TypeScript-first structure that scales cleanly for real product teams
+- rendering choices across SSG, SSR, ISR, and CSR
+- cache and revalidation decisions in a real app flow
+- middleware, auth, and protected-route behavior
+- route handlers and a BFF-style data layer
+- TypeScript-first architecture that stays readable as the project grows
 
 ## Project screenshots
 
-![Landing page](public/screenshots/home.png)
-
-![Collections view](public/screenshots/collections.png)
-
-![Interactive search experience](public/screenshots/search.png)
-
-## What to emphasize in an interview
-
-- I intentionally chose different rendering strategies for different product needs instead of using one pattern everywhere.
-- The architecture demonstrates how cache policy, middleware, and route design affect both performance and security.
-- The project reads like a production codebase: reusable content models, route clarity, and engineering trade-off documentation.
+![Portfolio overview](public/screenshots/portfolio-collage.png)
 
 ## What this project demonstrates
 
